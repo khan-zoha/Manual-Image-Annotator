@@ -1,0 +1,17 @@
+<%-include("partials/header");-%>
+<body>
+    <br><br><br><br><br>
+    <h1> Images </h1>
+    <br><br><br><br><br><br><br><br><br>
+    <p class="obj name col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block"> Select the range of images you would like to label </p>
+    <br><br><br><br>
+    <form action="/range" method="POST">
+        <input class="box answer name col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block" type="number" name="start" placeholder="Start">
+        <br><br>
+        <input class="box answer name col-lg-9 col-md-9 col-xs-9 col-sm-9 center-block" type="number" name="end" placeholder="End">
+        <br><br><br><br>
+        <button class="button next name col-lg-2 col-md-2 col-xs-2 col-sm-2 center-block" type="submit" > Next </button>
+    </form>
+    <script src="/js/index.js"></script>
+</body>
+</html>

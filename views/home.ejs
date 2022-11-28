@@ -1,0 +1,120 @@
+<%-include("partials/header");-%>
+<body>
+    <span class="material-icons md-48 md-16" onclick="location.replace('range')">arrow_back</span>
+    <br><br><br><br><br>
+    <h1> Images </h1>
+    <br><br><br><br><br>
+    <div class="">
+        <form action="/home" method="POST">
+            <% for(let count = Start; count < End ; count++ ){ %>
+                <div class="row">
+                    <div class="">
+                        <p style="font-size: 24px; margin-left: 44px;"> <%= count %>: <%= allImages[count] %></p>
+                        <img style="max-width: 100%; height: auto;" src="<%= allImages[count] %>" alt="hello">
+                    </div>
+
+                    <div style="margin-left: 100px;">
+                        <% if (allLabel[count] == "asian") { %>
+                            <p> <input type="radio" name="<%= allImages[count] %>" value="asian" checked>
+                                <label >  Asian  </label><br>
+                                <input type="radio"  name="<%= allImages[count] %>" value="black">
+                                <label>  Black  </label><br>
+                                <input type="radio"  name="<%= allImages[count] %>" value="indian">
+                                <label>  Indian  </label>
+                                <input type="radio" name="<%= allImages[count] %>" value="latino hispanic">
+                                <label>  Latino Hispanic  </label><br>
+                                <input type="radio"  name="<%= allImages[count] %>" value="middle eastern">
+                                <label>  Middle Eastern  </label><br>
+                                <input type="radio"  name="<%= allImages[count] %>" value="white">
+                                <label>  White  </label> </p>
+                                <input type="radio"  name="<%= allImages[count] %>" value="ambiguous">
+                                <label>  Ambiguous  </label> </p>
+                            <%} else if (allLabel[count] == "black") { %>
+                                <p> <input type="radio" name="<%= allImages[count] %>" value="asian">
+                                    <label>  Asian  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="black" checked>
+                                    <label>  Black  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="indian">
+                                    <label>  Indian  </label>
+                                    <input type="radio" name="<%= allImages[count] %>" value="latino hispanic">
+                                    <label>  Latino Hispanic  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="middle eastern">
+                                    <label>  Middle Eastern  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="white">
+                                    <label>  White  </label> </p>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="ambiguous">
+                                    <label>  Ambiguous  </label> </p>
+                            <%} else if (allLabel[count] == "indian") { %>
+                                <p> <input type="radio" name="<%= allImages[count] %>" value="asian">
+                                    <label>  Asian  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="black">
+                                    <label>  Black  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="indian" checked>
+                                    <label>  Indian  </label>
+                                    <input type="radio" name="<%= allImages[count] %>" value="latino hispanic">
+                                    <label>  Latino Hispanic  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="middle eastern">
+                                    <label>  Middle Eastern  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="white">
+                                    <label>  White  </label> </p>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="ambiguous">
+                                    <label>  Ambiguous  </label> </p>
+                            <%}else if (allLabel[count] == "latino hispanic") { %>
+                                <p> <input type="radio" name="<%= allImages[count] %>" value="asian">
+                                    <label>  Asian  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="black">
+                                    <label>  Black  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="indian">
+                                    <label>  Indian  </label>
+                                    <input type="radio" name="<%= allImages[count] %>" value="latino hispanic" checked>
+                                    <label>  Latino Hispanic  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="middle eastern">
+                                    <label>  Middle Eastern  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="white">
+                                    <label>  White  </label> </p>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="ambiguous">
+                                    <label>  Ambiguous  </label> </p>
+                            <%} else if (allLabel[count] == "middle eastern") { %>
+                                <p> <input type="radio" name="<%= allImages[count] %>" value="asian">
+                                    <label>  Asian  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="black">
+                                    <label>  Black  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="indian">
+                                    <label>  Indian  </label>
+                                    <input type="radio" name="<%= allImages[count] %>" value="latino hispanic">
+                                    <label>  Latino Hispanic  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="middle eastern" checked>
+                                    <label>  Middle Eastern  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="white">
+                                    <label>  White  </label> </p>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="ambiguous">
+                                    <label>  Ambiguous  </label> </p>
+                            <%} else if (allLabel[count] == "white") { %>
+                                <p> <input type="radio" name="<%= allImages[count] %>" value="asian">
+                                    <label>  Asian  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="black" >
+                                    <label>  Black  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="indian">
+                                    <label>  Indian  </label>
+                                    <input type="radio" name="<%= allImages[count] %>" value="latino hispanic">
+                                    <label>  Latino Hispanic  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="middle eastern">
+                                    <label>  Middle Eastern  </label><br>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="white" checked>
+                                    <label>  White  </label> </p>
+                                    <input type="radio"  name="<%= allImages[count] %>" value="ambiguous">
+                                    <label>  Ambiguous  </label> </p>
+                            <%}%>
+                    </div>
+    
+                </div>
+                <br><br><br><br><br><br><br><br><br>
+            <%} %>
+            <br><br><br>
+            <button class="button name col-lg-4 col-md-4 col-xs-6 col-sm-7 center-block ldrbtd" style="padding: 25px 50px 25px 50px; font-size: 25px;" type="submit" > Submit </button>
+            <br><br><br><br><br><br>
+        </form>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>
